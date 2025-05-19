@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: economics
+    database: finance__economics
+    schema: cybersyn
+    tables:
+      - name: fx_rates_timeseries
+      - name: oecd_timeseries
+      - name: international_monetary_fund_timeseries
+      - name: european_central_bank_timeseries
