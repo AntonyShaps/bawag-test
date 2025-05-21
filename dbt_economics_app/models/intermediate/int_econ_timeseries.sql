@@ -1,8 +1,7 @@
 {{ config(
     materialized = 'incremental',
     unique_key = 'pk',
-    incremental_strategy = 'merge',
-    cluster_by = ['geo_id', 'date']
+    incremental_strategy = 'merge'
 ) }}
 
 
@@ -17,8 +16,7 @@ with all_src as (
         variable_name,
         date,
         value,
-        unit,
-        null   as value_comment
+        unit
     from {{ ref('stg_oecd_timeseries') }}
 
     union all
@@ -32,8 +30,7 @@ with all_src as (
         variable_name,
         date,
         value,
-        unit,
-        value_comment
+        unit
     from {{ ref('stg_ecb_timeseries') }}
 
     union all
@@ -47,8 +44,7 @@ with all_src as (
         variable_name,
         date,
         value,
-        unit,
-        null   as value_comment
+        unit
     from {{ ref('stg_imf_timeseries') }}
 
 ),

@@ -35,6 +35,10 @@ models:
     staging:
       +materialized: view
       snowflake_warehouse: dbt_economics_wh
+    intermediate:
+      +materialized: incremental
+      +incremental_strategy: merge
+      snowflake_warehouse: dbt_economics_wh
     marts:
       +materialized: table
       snowflake_warehouse: dbt_economics_wh

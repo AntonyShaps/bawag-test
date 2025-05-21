@@ -7,5 +7,8 @@ sources:
     tables:
       - name: fx_rates_timeseries
       - name: oecd_timeseries
+      - name: oecd_attributes
       - name: international_monetary_fund_timeseries
+      - name: international_monetary_fund_attributes
       - name: european_central_bank_timeseries
+      - name: european_central_bank_attributes
