@@ -22,5 +22,5 @@ where
       )
   and geo_id like 'country/%'
   and counterpart_geo_id like 'country/%'
-  and date > '2019-12-31'
+  and date > '2019-12-30'
 
